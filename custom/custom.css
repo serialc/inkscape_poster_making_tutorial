@@ -1,0 +1,108 @@
+h1 {
+  margin-bottom: 1em;
+}
+
+.inverse code {
+  background: hsl(190, 25%, 8%);
+}
+
+p {
+  margin: 12px 0 6px 0;
+}
+
+ul {
+  margin-top: 0px;
+}
+
+.pl, .pr, .tl {
+  font-size: 1.2em;
+  margin-top: -24px;
+}
+
+.ts{
+  font-size: 0.8em;
+}
+
+.ms {
+  margin-left: 1em;
+}
+
+.me {
+  margin-right: 1em;
+}
+
+.w33, .w40, .w50, .w66, .w75, .w90, .w90 {
+  display: inline-block;
+}
+
+.w100 img { width: 100%; }
+.w100 { width: 100%; }
+.w90 { width: 90%; }
+.w80 { width: 80%; }
+.w75 { width: 75%; }
+.w66 { width: 66%; }
+.w50 { width: 50%; }
+.w40 { width: 40%; }
+.w33 { width: 33%; }
+
+.source, .sources {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 12px;
+}
+.source:before {
+  content: "Source: ";
+}
+.sources:before {
+  content: "Sources: ";
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0 15px;
+}
+
+.icon > img {
+  width: 80%;
+  height: 80%;
+}
+
+
+.pull-left, .pull-right, .pl, .pr {
+  text-align: left;
+  margin-top: -24px;
+}
+
+.pl {
+  float: left;
+  width: 47%;
+}
+
+.pr {
+  float: right;
+  width: 47%;
+}
+
+.pr + * {
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+
+.key {
+  border: 2px solid black;
+  border-radius: 3px;
+  background: radial-gradient(#ddd, #fff);
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.3rem;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.25em;
+  margin: 0 0.25em;
+}
