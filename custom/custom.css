@@ -81,9 +81,11 @@ ul {
 
 .fr {
   float: right;
+  margin-left: 1em;
 }
 .fl {
   float: left;
+  margin-right: 1em;
 }
   
 .pl {
