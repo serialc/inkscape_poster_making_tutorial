@@ -119,15 +119,17 @@ Raster graphics editor programs:
 
 # Learning objectives
 
-.pl[
+.pull-left[
 ## Outline
 - View, Controls and control modifiers (Shift and Ctrl)
+- Creating, moving, scaling, and rotating objects
 - Layers, Objects, the menus, and controls
-- Grouping and ungrouping
 - Selection
-- Hot keys
+- Grouping and Ungrouping objects
+- Shortcuts
 - Guides
 - Resize page to content
+- Commonly used Tools &amp; Panels
 - Export
 - Scaling (edges)
 - Fill/stroke order
@@ -135,88 +137,196 @@ Raster graphics editor programs:
 - Alignment and distribution
 ]
 
-.pr[
+.pull-right[
 ![InkScape panels and toolbars](imgs/toolbars.svg)
-InkScape has many panels and toolbars.
 
+InkScape has many Panels and Toolbars.
+
+Icons may appear different depepending on your theme/icon style.
 ]
 
 ---
-# Use two hands!
+
+# Toolbars, Controls, and Panels
+
+.w90[![SVG graphic showing labelled locations of the toolbars, controls, and panels](imgs/toolbars_explained.svg)]
+
+???
+
+You can modify which or where they are visible in the Menu under:
+- View -&gt; Show/Hide, and
+- View -&gt; Wide Screen
+
+---
+# Shortcuts - AKA Use Two Hands!
 .pl[
 **Shortcuts** make you much more productive:
-- Save: Ctrl-S
-- New canvas/file: Ctrl-N
-- Cut selection: Ctrl-X
-- Paste selection: Ctrl-V
-- Duplicate selection: Ctrl-D
-- Copy selection: Ctrl-C
-- Copy selection: Ctrl-C
-- Undo action: Ctrl-Z
-- Redo the undone action: Ctrl-Shift-Z
-- Space-bar: Switch to selector (and back)
+- Save: .key[Ctrl]-.key[S]
+- New canvas/file: .key[Ctrl]-.key[N]
+- Cut selection: .key[Ctrl]-.key[X]
+- Paste selection: .key[Ctrl]-.key[V]
+- Duplicate selection: .key[Ctrl]-.key[D]
+- Copy selection: .key[Ctrl]-.key[C]
+- Paste selection: .key[Ctrl]-.key[V]
+- Undo action: .key[Ctrl]-.key[Z]
+- Redo action: .key[Ctrl]-.key[Shift]-.key[Z]
+- Toggle selector: .key[Space-bar]
+
+The Status Bar also provides tool shortcuts/controls information.
 ]
 
-.pr[
-The **Ctrl, Shift, and Alt** keys are common modifiers.
+.pull-right[
+The **.key[Ctrl], .key[Shift], and .key[Alt]** keys are common **modifiers** in InkScape.
 
-If you are using a command, try using one of these modifiers as it may provide some helpful functionality.
+If you are using a tool and thinking *"It would be nice if I could do X!"*, try using one of these modifier keys as it may provide this functionality.
 
-![Keyboard and mouse](imgs/kb_mouse.png)
+.w75[![Keyboard and mouse](imgs/two_hands_two_devices.svg)]
 
-Two devices? Use two hands!
 ]
 
 ---
 # View, Controls and control modifiers
-.pl[
-**View: Panning, zooming**
-- Zoom-in: .key[Ctrl] + Mouse wheel or .key[+/=] key
-- Zoom-out: .key[Ctrl] + Mouse wheel or .key[-] key
+.tl[
+**Panning**
+- Free movement: Press mouse wheel down on Canvas
 - Pan up/down: Mouse wheel
 - Pan left/right: .key[Shift] + Mouse wheel
-- Manually (bottom right of screen):
-![Zoom and rotatation input](imgs/zoom_input.png)
+
+**Zooming**
+- Zoom-in: .key[Ctrl] + Mouse wheel or just the .key[\+ -] key
+- Zoom-out: .key[Ctrl] + Mouse wheel or just the .key[-] key
+- Commands Bar: ![Zoom Command Bar buttons](imgs/zoom_cb_buttons.png)
+- Manually (right side of Status Bar): ![Zoom and rotatation input](imgs/zoom_input.png)
 ]
 
+---
+# Creating objects
+
+.pull-left[
+From the Tools Bar, select the Rectangle Tool.
+
+Click and drag your cursor across the Canvas' Page.
+
+.w66[![animated creation of rectangle](imgs/anim/create_rect.svg)]
+
+In regular mode the shape follows your cursor.
+
+See the Status Bar for moderators of the tool.
+
+Also look at the Tool Controls Bar, where contetual options become available. For the rectangle tool you can set the corner radius.
+]
+
+.pull-right[
+Now try the same thing holding the .key[Shift] key:
+.w66[![animated creation of rectangle](imgs/anim/create_rect_mod_shift.svg)]
+
+And then the .key[Ctrl] key:
+.w66[![animated creation of rectangle](imgs/anim/create_rect_mod_ctrl.svg)]  
+Now try with both .key[Shift] + .key[Ctrl]. What happens?
+]
+
+---
+# Moving objects
+
+.pull-left[
+From the Tools Bar activate the **Select and transform** tool: ![Select tool](imgs/icons/select_tool.png) or press .key[S] to activate it.
+
+Alternatively, press .key[Spacebar] to toggle between another tool and the Select tool. **Very useful!**
+
+Simply click and drag an object to move it.
+
+![Moving object visualization](imgs/anim/moving_simple.svg)  
+It may snap to a nearby object.  
+This can be good or bad.
+]
+
+.pull-right[
+Now try the same thing holding the .key[Shift] key:
+![Moving object visualization](imgs/anim/moving_mod_shift.svg)  
+Snapping is disabled.
+
+And then the .key[Ctrl] key:
+![Moving object visualization](imgs/anim/moving_mod_ctrl.svg)  
+The object is locked to the horizontal or vertical.
+
+]
+
+---
+# Scaling objects
+
+---
+# Rotating objects
 
 ---
 # Layers, Objects, the menus, and controls
 
-.pl[
-You may have done posters or figures in PowerPoint. There you typically just move things forward, backwards, or to the front or back. InkScape gives you much finer control if you want it.
+.pull-left[
+You may have done posters or figures in PowerPoint. There you typically just move things forward, backwards, or to the front or back.
 
-There are **two** ways of viewing and organizing your objects beyond the canvas.
-- The Objects menu (Object -&gt; Objects...)
-- The Layers menu (Layer -&gt; Layers...)
+**InkScape gives you much finer control if you want it.**
 
-The Layer menu groups objects within layers, while the Objects menu shows the layers and their contents.
+InkScape uses the Layers and Objects metaphor to organize elements.
+You can open the Layer and Objects Panel in the following ways:
+- Object -&gt; Objects...
+- Layer -&gt; Layers...
 
-**The Groups menu is much better for organizing your content.**
+It results in the same Panel appearing.
+
+.ts[*InkScape recently merged Layers and Objects into one panel. They were different. The Layer menu grouped objects within layers, while the Objects menu shows the layers and their contained objects. You may encounter this in older versions of InkScape (versions &lt; 1.2).]
 ]
 
-.pr[
-Regardless of which menu you use, you are dealing with a visually hierarchy that we will call 'layers'.
+.pull-right[
+You are dealing with a visually hierarchy of layers.
 
-Moving objects within layers (in either the Layers or Objects menus) is easy:
-- Home: Move to front
-- End: Move to back
-- Page Up: Move towards front
-- Page Down: Move towards back
+Moving objects within layers is easy:
+- Drag them up/down and into other groups
+- Use the Layers and Objects Panel buttons:
+ .w100[![Panel menu up/down buttons](imgs/lop_menu_buttons.png)]
+- Home/End: Move to front/back
+- Page Up/Down: Move towards front/back
 
-You can of course use the mouse as well, but using the keyboard is typically faster.
+Dragging with the mouse is fine, but using the keyboard is typically faster and easier.
 ]
+
+---
+# Selection 
+
+
 
 ---
 # Grouping and Ungrouping
 
-.pl[
-You want to keep elements together as you build them. The best way to maintain their positional relationships is to group them.
-]
-.pr[
+.pull-left[
+You want to keep some elements together as you build your graphic.
+Either you want to keep:
+- Their visual order (what's on top of what)
+- Their relative position
+
+The best way to maintain relationships is to **group objects**.
+
 Grouping hotkeys:
 - Group: .key[Ctrl]+.key[G]
-- Ungroup: .key[Ctrl]+.key[U]
+- Ungroup: .key[Ctrl]+.key[U]  or .key[Ctrl]+.key[Shift]+.key[G]
+
+You can also Group/Ungroup using the Commands Bar buttons: 
+
+.w20[![Grouping commands buttons](imgs/commands_grouping.png)]
+]
+
+.pull-left[
+## 'Moving' within Groups
+
+You can now group elements, but how do you make changes to items within groups without ungrouping them.
+
+**Double clicking** on a group allows you to ***enter*** it, make changes to objects in the group, such as move them independently or change their styling.
+
+**Double clicking** outside of the group to ***exit*** the group.
+
+&lt;img src="imgs/grouping.png" width="55%" style="float:right; margin-left: 1em;"&gt;
+
+Note that you can have groups within groups and may need to double-click a few times to reach the level you wish to edit objects at.
+
+
 ]
 
 ---

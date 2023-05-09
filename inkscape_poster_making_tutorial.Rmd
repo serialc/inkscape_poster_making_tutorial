@@ -1,0 +1,350 @@
+---
+title: "InkScape: An applied introduction"
+subtitle: "Creating a poster"
+author: "Cyrille Médard de Chardon"
+institute: "Luxembourg Institute of Socio-Economic Research (LISER)"
+#date: "<br>Dec. 14, 2022"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, custom/custom.css] #xaringan-themer.css
+    #css: [default, xaringen-themer.css, custom.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: false
+      beforeInit: "custom/macros.js"
+      
+# Resources used to generate this presentation
+#remotes::install_github("yihui/xaringan")
+#https://slides.yihui.org/xaringan/
+
+#devtools::install_github("gadenbuie/xaringanExtra")
+#https://github.com/gadenbuie/xaringanExtra
+
+#install.packages("xaringanthemer")
+#https://github.com/gadenbuie/xaringanthemer
+
+# formatting information
+# https://bookdown.org/yihui/rmarkdown/xaringan-format.html#content-classes
+
+---
+class: 
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(xaringanthemer)
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css"))
+```
+
+# Outline
+
+.pl[
+This lesson will be 90 minutes - divided into about a 30 minute interactive outline of how to create posters using InkScape.
+
+Followed by 60 minutes of you working on your posters, with me assisting in answering any questions you have.
+
+We'll speak briefly about designing a poster, before looking at the basics of InkScape and how you can use it effectively.
+
+]
+
+.pr[
+
+.w66[![A poster example](imgs/Flyer_V5_from_pdf.svg)]<br>
+.sm[A poster for the Digilego Project]
+
+]
+
+---
+# Poster design concepts
+.pull-left[
+**Planning & preparation**
+- Tailor a story for *your audience*
+- Requirements, standards, and peers
+
+**Layout & content**
+- Clear flow / organization, with breathing space
+- Create all the content first
+  - Text, images, figures (vector) & spell check!
+- Target content to your audience
+- Less is more be succinct (brief)
+- Determine size of poster
+  - Impacts amount of information, and which images may be suitable
+]
+
+.pull-right[
+**Color Scheme & Fonts**
+- Select a consistent set of fonts and colours
+  - Limit font types (2 max), sizes (min. ~24pt)
+  - Serif fonts are easier to read
+- Ease reading: Left justify, no long text lines
+- Good contrast - Use faded underlays
+
+**Images & graphics**
+- Keep figures in vector format when possible (e.g., SVG, PDF)
+- Text in figures needs to be large enough
+- Images need to be high resolution to not be pixelated
+
+**Iterate through feedback**
+- Try printing a small copy - annotate changes/suggestions.
+
+.sources[[WCU](https://researchguides.wcu.edu/researchposter/home),   [UCD](https://urc.ucdavis.edu/sites/g/files/dgvnsk3561/files/inline-files/General%20Poster%20Design%20Principles%20-%20Handout.pdf)]
+
+]
+
+---
+
+# InkScape - A **vector** graphics editor
+
+.pl[
+InkScape is a free and open source vector editor. It's incredibly versatile.
+
+![Inkscape](imgs/inkscape_1_2_2.png)
+]
+
+.pr[
+Equivalent vector graphics editors programs:
+- Adobe Illustrator
+- CorelDraw
+
+Alternatively, raster graphics editors are the other type of 'drawing' system.
+It's most commonly used to edit photographs and for 'painting'.
+
+Raster graphics editor programs:
+- GIMP (free)
+- Adobe Photoshop
+]
+
+---
+
+# Learning objectives
+
+.pull-left[
+## Outline
+- View, Controls and control modifiers (Shift and Ctrl)
+- Creating, moving, scaling, and rotating objects
+- Layers, Objects, the menus, and controls
+- Selection
+- Grouping and Ungrouping objects
+- Shortcuts
+- Guides
+- Resize page to content
+- Commonly used Tools & Panels
+- Export
+- Scaling (edges)
+- Fill/stroke order
+- Text - add to stroke
+- Alignment and distribution
+]
+
+.pull-right[
+![InkScape panels and toolbars](imgs/toolbars.svg)
+
+InkScape has many Panels and Toolbars.
+
+Icons may appear different depepending on your theme/icon style.
+]
+
+---
+
+# Toolbars, Controls, and Panels
+
+.w90[![SVG graphic showing labelled locations of the toolbars, controls, and panels](imgs/toolbars_explained.svg)]
+
+???
+
+You can modify which or where they are visible in the Menu under:
+- View -> Show/Hide, and
+- View -> Wide Screen
+
+---
+# Shortcuts - AKA Use Two Hands!
+.pl[
+**Shortcuts** make you much more productive:
+- Save: .key[Ctrl]-.key[S]
+- New canvas/file: .key[Ctrl]-.key[N]
+- Cut selection: .key[Ctrl]-.key[X]
+- Paste selection: .key[Ctrl]-.key[V]
+- Duplicate selection: .key[Ctrl]-.key[D]
+- Copy selection: .key[Ctrl]-.key[C]
+- Paste selection: .key[Ctrl]-.key[V]
+- Undo action: .key[Ctrl]-.key[Z]
+- Redo action: .key[Ctrl]-.key[Shift]-.key[Z]
+- Toggle selector: .key[Space-bar]
+
+The Status Bar also provides tool shortcuts/controls information.
+]
+
+.pull-right[
+The **.key[Ctrl], .key[Shift], and .key[Alt]** keys are common **modifiers** in InkScape.
+
+If you are using a tool and thinking *"It would be nice if I could do X!"*, try using one of these modifier keys as it may provide this functionality.
+
+.w75[![Keyboard and mouse](imgs/two_hands_two_devices.svg)]
+
+]
+
+---
+# View, Controls and control modifiers
+.tl[
+**Panning**
+- Free movement: Press mouse wheel down on Canvas
+- Pan up/down: Mouse wheel
+- Pan left/right: .key[Shift] + Mouse wheel
+
+**Zooming**
+- Zoom-in: .key[Ctrl] + Mouse wheel or just the .key[\+ -] key
+- Zoom-out: .key[Ctrl] + Mouse wheel or just the .key[-] key
+- Commands Bar: ![Zoom Command Bar buttons](imgs/zoom_cb_buttons.png)
+- Manually (right side of Status Bar): ![Zoom and rotatation input](imgs/zoom_input.png)
+]
+
+---
+# Creating objects
+
+.pull-left[
+From the Tools Bar, select the Rectangle Tool.
+
+Click and drag your cursor across the Canvas' Page.
+
+.w66[![animated creation of rectangle](imgs/anim/create_rect.svg)]
+
+In regular mode the shape follows your cursor.
+
+See the Status Bar for moderators of the tool.
+
+Also look at the Tool Controls Bar, where contetual options become available. For the rectangle tool you can set the corner radius.
+]
+
+.pull-right[
+Now try the same thing holding the .key[Shift] key:
+.w66[![animated creation of rectangle](imgs/anim/create_rect_mod_shift.svg)]
+
+And then the .key[Ctrl] key:
+.w66[![animated creation of rectangle](imgs/anim/create_rect_mod_ctrl.svg)]  
+Now try with both .key[Shift] + .key[Ctrl]. What happens?
+]
+
+---
+# Moving objects
+
+.pull-left[
+From the Tools Bar activate the **Select and transform** tool: ![Select tool](imgs/icons/select_tool.png) or press .key[S] to activate it.
+
+Alternatively, press .key[Spacebar] to toggle between another tool and the Select tool. **Very useful!**
+
+Simply click and drag an object to move it.
+
+![Moving object visualization](imgs/anim/moving_simple.svg)  
+It may snap to a nearby object.  
+This can be good or bad.
+]
+
+.pull-right[
+Now try the same thing holding the .key[Shift] key:
+![Moving object visualization](imgs/anim/moving_mod_shift.svg)  
+Snapping is disabled.
+
+And then the .key[Ctrl] key:
+![Moving object visualization](imgs/anim/moving_mod_ctrl.svg)  
+The object is locked to the horizontal or vertical.
+
+]
+
+---
+# Scaling objects
+
+---
+# Rotating objects
+
+---
+# Layers, Objects, the menus, and controls
+
+.pull-left[
+You may have done posters or figures in PowerPoint. There you typically just move things forward, backwards, or to the front or back.
+
+**InkScape gives you much finer control if you want it.**
+
+InkScape uses the Layers and Objects metaphor to organize elements.
+You can open the Layer and Objects Panel in the following ways:
+- Object -> Objects...
+- Layer -> Layers...
+
+It results in the same Panel appearing.
+
+.ts[*InkScape recently merged Layers and Objects into one panel. They were different. The Layer menu grouped objects within layers, while the Objects menu shows the layers and their contained objects. You may encounter this in older versions of InkScape (versions < 1.2).]
+]
+
+.pull-right[
+You are dealing with a visually hierarchy of layers.
+
+Moving objects within layers is easy:
+- Drag them up/down and into other groups
+- Use the Layers and Objects Panel buttons:
+ .w100[![Panel menu up/down buttons](imgs/lop_menu_buttons.png)]
+- Home/End: Move to front/back
+- Page Up/Down: Move towards front/back
+
+Dragging with the mouse is fine, but using the keyboard is typically faster and easier.
+]
+
+---
+# Selection 
+
+
+
+---
+# Grouping and Ungrouping
+
+.pull-left[
+You want to keep some elements together as you build your graphic.
+Either you want to keep:
+- Their visual order (what's on top of what)
+- Their relative position
+
+The best way to maintain relationships is to **group objects**.
+
+Grouping hotkeys:
+- Group: .key[Ctrl]+.key[G]
+- Ungroup: .key[Ctrl]+.key[U]  or .key[Ctrl]+.key[Shift]+.key[G]
+
+You can also Group/Ungroup using the Commands Bar buttons: 
+
+.w20[![Grouping commands buttons](imgs/commands_grouping.png)]
+]
+
+.pull-left[
+## 'Moving' within Groups
+
+You can now group elements, but how do you make changes to items within groups without ungrouping them.
+
+**Double clicking** on a group allows you to ***enter*** it, make changes to objects in the group, such as move them independently or change their styling.
+
+**Double clicking** outside of the group to ***exit*** the group.
+
+<img src="imgs/grouping.png" width="55%" style="float:right; margin-left: 1em;">
+
+Note that you can have groups within groups and may need to double-click a few times to reach the level you wish to edit objects at.
+
+
+]
+
+---
+# Closing
+
+.pl[
+**Poster**
+The best method of having a good poster is to get as much feedback from others as possible.
+
+**InkScape**
+There are many many resources - remember to Google for help.
+
+]
+
+.pr[
+Sources:
+- [Inkscape tutorial: Basic](https://inkscape.org/doc/tutorials/basic/tutorial-basic.html)
+]

@@ -31,12 +31,15 @@ ul {
   margin-right: 1em;
 }
 
-.w33, .w40, .w50, .w66, .w75, .w90, .w90 {
+.w20, .w33, .w40, .w50, .w66, .w75, .w80, .w90, .w100 {
   display: inline-block;
 }
 
-.w100 img { width: 100%; }
-.w100 { width: 100%; }
+.w20 img, .w33 img, .w40 img, .w50 img, .w66 img, .w75 img, .w80 img, .w90 img, .w100 img {
+  width: 100%;
+}
+
+.w100{ width: 100%; }
 .w90 { width: 90%; }
 .w80 { width: 80%; }
 .w75 { width: 75%; }
@@ -44,6 +47,7 @@ ul {
 .w50 { width: 50%; }
 .w40 { width: 40%; }
 .w33 { width: 33%; }
+.w20 { width: 20%; }
 
 .source, .sources {
   font-size: 0.8em;
@@ -75,6 +79,13 @@ ul {
   margin-top: -24px;
 }
 
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+  
 .pl {
   float: left;
   width: 47%;
