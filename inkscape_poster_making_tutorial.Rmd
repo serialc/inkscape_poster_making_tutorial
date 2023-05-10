@@ -1,8 +1,8 @@
 ---
 title: "InkScape: An applied introduction"
-subtitle: "Creating a poster"
+subtitle: "Developing skills for poster, flyer, figure, or graph creation"
 author: "Cyrille Médard de Chardon"
-institute: "Luxembourg Institute of Socio-Economic Research (LISER)"
+institute: "Luxembourg Institute of Socio-Economic Research (LISER)<br>&nbsp;<br> ![Digilego logo](imgs/logo_and_text_black.svg)"
 #date: "<br>Dec. 14, 2022"
 output:
   xaringan::moon_reader:
@@ -15,6 +15,7 @@ output:
       ratio: 16:9
       countIncrementalSlides: false
       beforeInit: "custom/macros.js"
+      titleSlideClass: ["titlebg"]
       
 # Resources used to generate this presentation
 #remotes::install_github("yihui/xaringan")
@@ -569,11 +570,22 @@ The best method to make a good poster is to get as much feedback from others as 
 
 .pl[
 ## InkScape Resources
-There are many many resources - remember to Google for help.
-]
+There are many many resources:
+- [Inkscape](https://inkscape.org/learn/)
+- Google for help
+- Tutorials on YouTube
 
-.pr[
 ## Sources
 - [Inkscape tutorial: Basic](https://inkscape.org/doc/tutorials/basic/tutorial-basic.html)
 - [Inkscape shortcuts](https://inkscape.org/doc/keys.html)
+]
+
+.pull-right[
+## Funding
+
+![Digilego logo](imgs/logo_and_text_black.svg)
+
+The creation of this resources has been (partially) funded by the ERASMUS+ grant program of the European Union under grant no. 2020 1 DE01 KA226 005814. Neither the European Commission nor the project's national funding agency DAAD are responsible for the content or liable for any losses or damage resulting from the use of these resources.
+
+
 ]
