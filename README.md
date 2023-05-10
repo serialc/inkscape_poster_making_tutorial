@@ -1,2 +1,2 @@
-# inkscape_poster_making_tutorial
+# Inkscape tutorial
 A presentation/tutorial on making posters with InkScape.
