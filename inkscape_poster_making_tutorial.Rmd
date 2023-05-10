@@ -125,11 +125,11 @@ Raster graphics editor programs:
 .pull-left[
 ## Outline
 - View, Controls and control modifiers (Shift and Ctrl)
+- Shortcuts
 - Creating, moving, scaling, and rotating objects
 - Layers, Objects, the menus, and controls
 - Selection
 - Grouping and Ungrouping objects
-- Shortcuts
 - Guides
 - Resize page to content
 - Commonly used Tools & Panels
@@ -232,7 +232,7 @@ Now try with both .key[Shift] + .key[Ctrl]. What happens?
 # Moving objects
 
 .pull-left[
-From the Tools Bar activate the **Select and transform** tool: ![Select tool](imgs/icons/select_tool.png) or press .key[S] to activate it.
+From the Tools Bar activate the **Select and transform** tool: ![Select tool](imgs/icons/select_tool.png) or press .key[S] or .key[F1] to activate it.
 
 Alternatively, press .key[Spacebar] to toggle between another tool and the Select tool. **Very useful!**
 
@@ -259,14 +259,14 @@ Now try with both .key[Shift] + .key[Ctrl]. What happens?
 # Scaling objects
 
 .pull-left[
-.fr[![Scaling controls](imgs/scale_controls.png)]
+.fr[![Scaling controls](imgs/anim/scale_controls.svg)]
 
 Using the same **Select and transform** tool  ![Select tool](imgs/icons/select_tool.png) it is possible to scale the object by grabbing the controls that appear when clicking on an object.
 
 
 Once a scale control, the double edge arrows, is grabbed, modifying the scale or shape of an object behaves **similarly** to the creation of an object.
 
-When grabbing corner controls, rather than locking to square or other preset ratios, .key[Ctrl] maintains the existing ratio.
+When grabbing controls and modifing a shape with the .key[Ctrl] it maintains the existing ratio rather than locking to square or other pre-set ratios.
 ]
 
 .pull-right[
@@ -278,6 +278,32 @@ When grabbing corner controls, rather than locking to square or other preset rat
 
 ---
 # Rotating objects
+
+.pull-left[
+.fr[![Rotation and skew controls](imgs/anim/rotate_controls.svg)]
+
+Clicking on a shape or object twice, but not double clicking, will bring up the rotation and skew controls.
+
+You can rotate the object freely by grabbing the corner controls.
+.fl[![Regular rotation](imgs/anim/rotate_simple.svg)]
+
+It rotates about the **point of rotation** ![point of rotation icon](imgs/icons/rotation_point.png), which can be adjusted!
+
+<hr>
+
+The edge controls skew the shape, rather than rotate.
+]
+
+.pull-right[
+A .key[Shift] rotation pivots on the opposite corner.
+
+![Regular rotation](imgs/anim/rotate_mod_shift.svg)
+
+A .key[Ctrl] rotation locks to 15 degree increments.
+
+![Regular rotation](imgs/anim/rotate_mod_ctrl.svg)
+
+]
 
 ---
 # Layers, Objects, the menus, and controls
@@ -298,14 +324,16 @@ It results in the same Panel appearing.
 ]
 
 .pull-right[
-You are dealing with a visually hierarchy of layers.
+You are dealing with a visually hierarchy of layers, Inkscape calls Z-order. 
+
+**Top layers and objects cover the lower ones.**
 
 Moving objects within layers is easy:
 - Drag them up/down and into other groups
 - Use the Layers and Objects Panel buttons:
  .w100[![Panel menu up/down buttons](imgs/lop_menu_buttons.png)]
-- Home/End: Move to front/back
-- Page Up/Down: Move towards front/back
+- .key[Home]/.key[End]: Move to front/back
+- .key[PgUp]/.key[PgDown]: Move towards front/back
 
 Dragging with the mouse is fine, but using the keyboard is typically faster and easier.
 ]
@@ -313,7 +341,38 @@ Dragging with the mouse is fine, but using the keyboard is typically faster and 
 ---
 # Selection 
 
+.pull-left[
+To select an object, still using the Selector Tool ![Selector icon](imgs/icons/select_tool.png), you can either:
+- Click on it.
+- Drag a selection box (called a rubberband selection) completely around it and others.
+- .key[Shift] click to add/subtract from your selection.
+- .key[Ctrl] + .key[A] Selects all objects in the current layer.
+- .key[Alt] allows you to pierce through objects with successive clicks. Hold .key[Alt] to then move the object.
 
+<img src="imgs/right_click_selection.png" alt="Right click selection menu" width="60%" style="float: right; margin-left: 1em;">
+- Right-click on an object also allows, among other things, selection based on fill or stroke.
+
+]
+
+.pull-right[
+**Deselection** can be done by:
+- Clicking an empty part of the canvas
+- Pressing .key[Esc]
+
+
+## Rubberband selection
+<img src="imgs/rubberband_selection.png" alt="Rubberband selection example" width="50%" style="float: right; margin-left: 1em;">
+Using the rubberband selection can be problematic if you have a a background object. Use .key[Shift] to force the rubberband selection tool, without selecting the object you click on to start it.
+
+]
+
+???
+
+This allows you to move multiple objects together while maintaining their relative arrangement.
+
+This method is fine short term, but there needs to be a better way to maintain relationships more robustly when desired.
+
+**There is.**
 
 ---
 # Grouping and Ungrouping
@@ -348,6 +407,160 @@ You can now group elements, but how do you make changes to items within groups w
 
 Note that you can have groups within groups and may need to double-click a few times to reach the level you wish to edit objects at.
 
+]
+
+---
+# Guides & Snapping
+
+.pl[
+## Guides
+Guides can be creating by pulling/dragging from either ruler onto the Canvas.  
+These will help you align content.
+
+They can be manually adjusted (double click), labelled, rotated, and deleted with .key[Delete].
+
+These are only useful however if **snapping** is enabled.
+]
+
+.pr[
+## Snapping
+
+The Snap Control Bar is in the top right corner. Opening it allows you to select exactly what kinds of snaps you want to allow (e.g., edges, nodes, mid-points, etc...).
+
+![Moving object visualization](imgs/anim/moving_simple.svg)  
+
+]
+
+---
+# Pages
+
+.pull-left[
+At the bottom of the Tools Bar is the Page creation and editing tool.
+
+It allows you to:
+- Create a new page by clicking on the canvas and dragging a rectangle.
+- Manually resize existing pages.
+- Select a pre-set page size from the Tool Controls Bar.
+
+![Page Tool Control Bar](imgs/page_tool_control_bar.png)
+
+With the Page Tool Control Bar you can:
+- Reorder pages
+- Set the page size
+- Set the pages size to the content size
+]
+
+.pr[
+## Exporting
+Each page can be individually exported as an image.
+You can select your page to export from the Status Bar.
+
+When exporting to **PDF** they works as expected, as separate pages.
+
+See the Export section a few pages later.
+]
+
+---
+# Common Tools and Panels
+
+.pull-left[
+## Common Tools
+<img src="imgs/tools_bar.svg" alt="Tools Bar" style="float: left;" width="40">
+
+<ol style="margin-left: 2em">
+<li> Select & Transform (S)</li>
+<li> Edit Paths by nodes (N)</li>
+<li> Create Rectangle (R)</li>
+<li> Create Circle, Ellipses, & Arcs (E)</li>
+<li> Beziers and Straight lines (B)</li>
+<li> Text (T)</li>
+<li> Dropper (D)</li>
+<li> Pages</li>
+</ol>
+]
+
+.pull-right[
+## Common Panels
+Most of these can be enabled by the Object Menu.
+
+.fr[Fill & Stroke: .key[Shift] + .key[Ctrl] + .key[F]]
+.fr[Layers & Objects:.key[Shift] + .key[Ctrl] + .key[L]]
+.fr[Align & Distribute: .key[Shift] + .key[Ctrl] + .key[A]]
+.fr[Transform: .key[Shift] + .key[Ctrl] + .key[M]]
+.fr[Export: .key[Shift] + .key[Ctrl] + .key[E]]
+
+.w100[<hr>]
+
+So holding .key[Shift] + .key[Ctrl] and typing:
+
+.key[F].key[L].key[A].key[M].key[E]
+
+Opens commonly used panels.
+
+]
+
+---
+# Fill & Stroke
+
+.pl[
+The fill and outline colour, as well as stroke thickness and style, provide most of the styling needed to make a figure, graph, map, or poster.
+
+You may occasionally use the Fill and Stroke paint sub-tabs, but try not to. It's more efficient to either use the Colour Palette to set the fill by clicking or Stroke by .key[Shift] clicking.
+
+Additionally, the dropper tool can copy colour from other objects in the canvas. It also allows using .key[Shift] to set the Stroke.
+
+]
+
+.pr[
+.w80[![Fill and stroke](imgs/fill_and_stroke_panel.png)]
+
+]
+
+---
+# Exporting and Saving
+
+.pull-left[
+## Exporting to PDF
+From the Menu:
+- File -> Save a Copy...
+
+## Saving to SVG
+
+Once happy with your poster, export it to PDF or whatever format needed by the printer or journal.   
+
+You will need the SVG file if you wish to makes changes in the future so **always keep an SVG copy as the good source**.
+
+It is possible to open a **PDF** file in Inkscape, but, likely, all text will be converted to **shapes**, no longer editable.
+
+]
+
+.pull-right[
+## Exporting to PNG (or other)
+Open the Export Panel with:
+- Menu: File -> Export...
+- Shortcut: .key[Shift] + .key[Ctrl] + .key[E]
+
+<img src="imgs/export_to_png.png" alt="Export to PNG" width="60%" style="float: right; margin-left: 1em">
+
+
+You can select the page you wish to export from the Status Bar.
+]
+
+
+
+---
+# Creating a Poster
+.pl[
+You now have more than enough skills to make a poster.
+
+Start by creating a Page of the size of your poster (e.g. A3, A2, etc...), or flyer (e.g., A5, A6).
+
+You should already have the content ready, and perhaps some photographs, graphs or designs in mind.
+]
+
+.pr[
+## Making a Good Poster
+The best method to make a good poster is to get as much feedback from others as possible.
 
 ]
 
@@ -355,15 +568,12 @@ Note that you can have groups within groups and may need to double-click a few t
 # Closing
 
 .pl[
-**Poster**
-The best method of having a good poster is to get as much feedback from others as possible.
-
-**InkScape**
+## InkScape Resources
 There are many many resources - remember to Google for help.
-
 ]
 
 .pr[
-Sources:
+## Sources
 - [Inkscape tutorial: Basic](https://inkscape.org/doc/tutorials/basic/tutorial-basic.html)
+- [Inkscape shortcuts](https://inkscape.org/doc/keys.html)
 ]
