@@ -51,7 +51,7 @@ We'll speak briefly about designing a poster, before looking at the basics of In
 
 .pr[
 
-.w66[![A poster example](imgs/Flyer_V5_from_pdf.svg)]&lt;br&gt;
+.w66[![A poster example](imgs/posters/Flyer_V5_from_pdf.svg)]&lt;br&gt;
 .sm[A poster for the Digilego Project]
 
 ]
@@ -167,10 +167,9 @@ You can modify which or where they are visible in the Menu under:
 - Save: .key[Ctrl]-.key[S]
 - New canvas/file: .key[Ctrl]-.key[N]
 - Cut selection: .key[Ctrl]-.key[X]
-- Paste selection: .key[Ctrl]-.key[V]
-- Duplicate selection: .key[Ctrl]-.key[D]
 - Copy selection: .key[Ctrl]-.key[C]
 - Paste selection: .key[Ctrl]-.key[V]
+- Duplicate selection: .key[Ctrl]-.key[D]
 - Undo action: .key[Ctrl]-.key[Z]
 - Redo action: .key[Ctrl]-.key[Shift]-.key[Z]
 - Toggle selector: .key[Space-bar]
@@ -306,39 +305,6 @@ A .key[Ctrl] rotation locks to 15 degree increments.
 ]
 
 ---
-# Layers, Objects, the menus, and controls
-
-.pull-left[
-You may have done posters or figures in PowerPoint. There you typically just move things forward, backwards, or to the front or back.
-
-**Inkscape gives you much finer control if you want it.**
-
-Inkscape uses the Layers and Objects metaphor to organize elements.
-You can open the Layer and Objects Panel in the following ways:
-- Object -&gt; Objects...
-- Layer -&gt; Layers...
-
-It results in the same Panel appearing.
-
-.ts[*Inkscape recently merged Layers and Objects into one panel. They were different. The Layer menu grouped objects within layers, while the Objects menu shows the layers and their contained objects. You may encounter this in older versions of Inkscape (versions &lt; 1.2).]
-]
-
-.pull-right[
-You are dealing with a visually hierarchy of layers, Inkscape calls Z-order. 
-
-**Top layers and objects cover the lower ones.**
-
-Moving objects within layers is easy:
-- Drag them up/down and into other groups
-- Use the Layers and Objects Panel buttons:
- .w100[![Panel menu up/down buttons](imgs/lop_menu_buttons.png)]
-- .key[Home]/.key[End]: Move to front/back
-- .key[PgUp]/.key[PgDown]: Move towards front/back
-
-Dragging with the mouse is fine, but using the keyboard is typically faster and easier.
-]
-
----
 # Selection 
 
 .pull-left[
@@ -375,9 +341,10 @@ This method is fine short term, but there needs to be a better way to maintain r
 **There is.**
 
 ---
-# Grouping and Ungrouping
+# Groups
 
 .pull-left[
+## Grouping &amp; Ungrouping
 You want to keep some elements together as you build your graphic.
 Either you want to keep:
 - Their visual order (what's on top of what)
@@ -391,7 +358,7 @@ Grouping hotkeys:
 
 You can also Group/Ungroup using the Commands Bar buttons: 
 
-.w20[![Grouping commands buttons](imgs/commands_grouping.png)]
+.w33[![Grouping commands buttons](imgs/commands_grouping.png)]
 ]
 
 .pull-left[
@@ -434,6 +401,8 @@ The Snap Control Bar is in the top right corner. Opening it allows you to select
 ---
 # Pages
 
+.w100[![Page Tool Control Bar](imgs/page_tool_control_bar.png)]
+
 .pull-left[
 At the bottom of the Tools Bar is the Page creation and editing tool.
 
@@ -442,7 +411,6 @@ It allows you to:
 - Manually resize existing pages.
 - Select a pre-set page size from the Tool Controls Bar.
 
-![Page Tool Control Bar](imgs/page_tool_control_bar.png)
 
 With the Page Tool Control Bar you can:
 - Reorder pages
@@ -457,30 +425,41 @@ You can select your page to export from the Status Bar.
 
 When exporting to **PDF** they works as expected, as separate pages.
 
-See the Export section a few pages later.
+*More about this on the Export page later.*
 ]
 
 ---
-# Common Tools and Panels
+# Commonly used Tools
 
-.pull-left[
-## Common Tools
+.pl40[
 &lt;img src="imgs/tools_bar.svg" alt="Tools Bar" style="float: left;" width="40"&gt;
 
+.tl[
 &lt;ol style="margin-left: 2em"&gt;
 &lt;li&gt; Select &amp; Transform (S)&lt;/li&gt;
 &lt;li&gt; Edit Paths by nodes (N)&lt;/li&gt;
 &lt;li&gt; Create Rectangle (R)&lt;/li&gt;
-&lt;li&gt; Create Circle, Ellipses, &amp; Arcs (E)&lt;/li&gt;
+&lt;li&gt; Create Circle, Ellipse, Arc (E)&lt;/li&gt;
 &lt;li&gt; Beziers and Straight lines (B)&lt;/li&gt;
 &lt;li&gt; Text (T)&lt;/li&gt;
 &lt;li&gt; Dropper (D)&lt;/li&gt;
 &lt;li&gt; Pages&lt;/li&gt;
 &lt;/ol&gt;
 ]
+]
 
-.pull-right[
-## Common Panels
+.pr60[
+
+.w100[![Common tools](imgs/common_tools.svg)]
+
+
+More information on the [two types/modes of Text creation](https://inkscape-manuals.readthedocs.io/en/latest/writing-text.html).
+]
+
+---
+# Commonly used Panels
+
+.pl[
 Most of these can be enabled by the Object Menu.
 
 .fr[Fill &amp; Stroke: .key[Shift] + .key[Ctrl] + .key[F]]
@@ -488,19 +467,20 @@ Most of these can be enabled by the Object Menu.
 .fr[Align &amp; Distribute: .key[Shift] + .key[Ctrl] + .key[A]]
 .fr[Transform: .key[Shift] + .key[Ctrl] + .key[M]]
 .fr[Export: .key[Shift] + .key[Ctrl] + .key[E]]
+]
 
-.w100[&lt;hr&gt;]
-
+.pr[
 So holding .key[Shift] + .key[Ctrl] and typing:
 
 .key[F].key[L].key[A].key[M].key[E]
 
 Opens commonly used panels.
 
+.w100[![Flame image](imgs/flame.svg)]
 ]
 
 ---
-# Fill &amp; Stroke
+# Fill &amp; Stroke Panel
 
 .pl[
 The fill and outline colour, as well as stroke thickness and style, provide most of the styling needed to make a figure, graph, map, or poster.
@@ -517,7 +497,79 @@ Additionally, the dropper tool can copy colour from other objects in the canvas.
 ]
 
 ---
-# Exporting and Saving
+# Layers and Objects Panel
+
+.pull-left[
+You may have done posters or figures in PowerPoint. There you typically just move things forward, backwards, or to the front or back.
+
+**Inkscape gives you much finer control if you want it.**
+
+Inkscape uses the Layers and Objects metaphor to organize elements.
+You can open the Layer and Objects Panel in the following ways:
+- Object -&gt; Objects...
+- Layer -&gt; Layers...
+
+It results in the same Panel appearing.
+
+.ts[*Inkscape recently merged Layers and Objects into one panel. They were different. The Layer menu grouped objects within layers, while the Objects menu shows the layers and their contained objects. You may encounter this in older versions of Inkscape (versions &lt; 1.2).]
+]
+
+.pull-right[
+You are dealing with a visually hierarchy of layers, Inkscape calls Z-order. 
+
+**Top layers and objects cover the lower ones.**
+
+Moving objects within layers is easy:
+- Drag them up/down and into other groups
+- Use the Layers and Objects Panel buttons:
+ .w100[![Panel menu up/down buttons](imgs/lop_menu_buttons.png)]
+- .key[Home]/.key[End]: Move to front/back
+- .key[PgUp]/.key[PgDown]: Move towards front/back
+
+Dragging with the mouse is fine, but using the keyboard is typically faster and easier.
+]
+
+---
+# Alignment and Distribution Panel
+
+.fr[![Align and Distribute Panel](imgs/align_panel.png)]
+## Align
+.fr[![Distribute examples](imgs/align_examples.svg)]
+Allows making **selected** objects align along one of the four sides.
+
+Alignment is **always relative**, to what do you want to align the selected objects to?  
+One of the objects? The page?
+
+
+**Select what your alignment is relative to**
+
+## Distribute
+Equalize the spacing between the selected objects, based on the white space or the centres of the objects.
+
+![Distribute examples](imgs/distribute_examples.svg)
+
+---
+# Modify / Transform Panel
+.fr[![Modiry and Transform Panel](imgs/modify_transform_panel.png)]
+
+.pl[
+
+You can modify objects manually or in the Tools Control Bar, such as setting the Canvas location or object size.
+
+However, you can manually shift:
+- Location
+- Scale
+- Rotation
+- Skew
+
+.fr[![Modify rotation example design](imgs/modify_rotation.svg)]
+
+This is particularly useful for precision rotation, when you have a design in mind.
+
+]
+
+---
+# Exporting Panel (and Saving)
 
 .pull-left[
 ## Exporting to PDF
@@ -556,11 +608,15 @@ You now have more than enough skills to make a poster.
 Start by creating a Page of the size of your poster (e.g. A3, A2, etc...), or flyer (e.g., A5, A6).
 
 You should already have the content ready, and perhaps some photographs, graphs or designs in mind.
+
+You can add images to Inkscape by just dropping them onto the Canvas.
+
+## Remember
+The best method to make a good poster is to get as much feedback from others as possible.
 ]
 
 .pr[
-## Making a Good Poster
-The best method to make a good poster is to get as much feedback from others as possible.
+.fit[![Poster](imgs/posters/Burren_workshop.svg)]
 
 ]
 

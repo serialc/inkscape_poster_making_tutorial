@@ -79,24 +79,24 @@ ul {
   margin-top: -24px;
 }
 
-.fr {
+.fl, .pl, .pl40, .pl60 {
+  float: left;
+}
+.fr, .pr, .pr40, .pr60 {
   float: right;
-  margin-left: 1em;
-}
-.fl {
-  float: left;
-  margin-right: 1em;
-}
-  
-.pl {
-  float: left;
-  width: 47%;
 }
 
-.pr {
-  float: right;
-  width: 47%;
-}
+.fr { margin-left: 1em; }
+.fl { margin-right: 1em; }
+  
+.pl40 { width: 37%; }
+.pl   { width: 47%; }
+.pl60 { width: 57%; }
+
+.pr40 { width: 37%; }
+.pr { width: 47%; }
+.pr60 { width: 57%; }
+
 
 .pr + * {
   clear: both;
@@ -104,6 +104,12 @@ ul {
 
 .center {
   text-align: center;
+}
+
+.fit > *{
+  max-width: 100%;
+  max-height: 60vh;
+  display: block;
 }
 
 .key {
