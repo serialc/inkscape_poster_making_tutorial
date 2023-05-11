@@ -43,17 +43,23 @@ xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css"))
 
 # Outline
 
-.pl[
+.pl60[
 This lesson will be 90 minutes:
 - Starting with the basics of using Inkscape,
-- followed by you practicing or working on your posters,
-- with me assisting in answering any questions you have.
+- followed by you practicing or working on your posters, and
+- me assisting in answering any questions you have.
 
-We'll speak briefly about designing a poster, before looking at the basics of Inkscape and how you can use it effectively.
+We'll speak briefly about designing a poster, before looking at the basics of Inkscape and how you can use it *effectively*.
+
+.fl[![QR code to this tutorial](imgs/tutorial_qr-code.svg)]
+
+This presentation is available [online](https://serialc.github.io/inkscape_poster_making_tutorial/inkscape_poster_making_tutorial.html) and can be found by following the links at:  
+.tl[.tl[**serialc.github.io**]]
+
 
 ]
 
-.pr[
+.pr40[
 
 .w66[![A poster example](imgs/posters/Flyer_V5_from_pdf.svg)]<br>
 .sm[A poster for the Digilego Project]
@@ -145,15 +151,13 @@ Raster graphics editor programs:
 ]
 
 .pull-right[
+Inkscape has many Toolbars and Panels.
 ![Inkscape panels and toolbars](imgs/toolbars.svg)
+Icons in this presentation may appear different than mine depending on your theme/icon style.
 
-Inkscape has many Panels and Toolbars.
-
-Icons may appear different depepending on your theme/icon style.
 ]
 
 ---
-
 # Toolbars, Controls, and Panels
 
 .w90[![SVG graphic showing labelled locations of the toolbars, controls, and panels](imgs/toolbars_explained.svg)]
@@ -166,7 +170,7 @@ You can modify which or where they are visible in the Menu under:
 
 ---
 # Shortcuts - AKA Use Two Hands!
-.pl[
+.pl40[
 **Shortcuts** make you much more productive:
 - Save: .key[Ctrl]-.key[S]
 - New canvas/file: .key[Ctrl]-.key[N]
@@ -181,7 +185,7 @@ You can modify which or where they are visible in the Menu under:
 The Status Bar also provides tool shortcuts/controls information.
 ]
 
-.pull-right[
+.pr60[
 The **.key[Ctrl], .key[Shift], and .key[Alt]** keys are common **modifiers** in Inkscape.
 
 If you are using a tool and thinking *"It would be nice if I could do X!"*, try using one of these modifier keys as it may provide this functionality.
@@ -247,13 +251,18 @@ This can be good or bad.
 ]
 
 .pull-right[
-Now try the same thing holding the .key[Shift] key:
-![Moving object visualization](imgs/anim/moving_mod_shift.svg)  
-Snapping is disabled.
+.fr[![Moving object visualization](imgs/anim/moving_mod_shift.svg)]
+Try the same with the .key[Shift] key.  
+**Snapping is disabled.**
 
-And then the .key[Ctrl] key:
-![Moving object visualization](imgs/anim/moving_mod_ctrl.svg)  
-The object is locked to the horizontal or vertical.  
+<br>
+
+.fr[![Moving object visualization](imgs/anim/moving_mod_ctrl.svg)]
+Now the .key[Ctrl] key.
+Object are **locked to the horizontal or vertical axes.**
+
+<br>
+
 Now try with both .key[Shift] + .key[Ctrl]. What happens?
 
 ]
@@ -274,9 +283,12 @@ When grabbing controls and modifing a shape with the .key[Ctrl] it maintains the
 
 .pull-right[
 
-.w66[![Scaling object visualization](imgs/anim/scale_simple.svg)] Regular - pull
-.w66[![Scaling object visualization](imgs/anim/scale_mod_shift.svg)] .key[Shift] - mirrors
-.w66[![Scaling object visualization](imgs/anim/scale_mod_ctrl.svg)] .key[Ctrl] - scales
+.w66[![Scaling object visualization](imgs/anim/scale_simple.svg)] 
+.fr[Regular - pull]
+.w66[![Scaling object visualization](imgs/anim/scale_mod_shift.svg)]
+.fr[.key[Shift] - mirrors]
+.w66[![Scaling object visualization](imgs/anim/scale_mod_ctrl.svg)] 
+.fr[.key[Ctrl] - scales]
 ]
 
 ---
@@ -288,11 +300,14 @@ When grabbing controls and modifing a shape with the .key[Ctrl] it maintains the
 Clicking on a shape or object twice, but not double clicking, will bring up the rotation and skew controls.
 
 You can rotate the object freely by grabbing the corner controls.
+
+<br>
+
 .fl[![Regular rotation](imgs/anim/rotate_simple.svg)]
 
 It rotates about the **point of rotation** ![point of rotation icon](imgs/icons/rotation_point.png), which can be adjusted!
 
-<hr>
+<br>
 
 The edge controls skew the shape, rather than rotate.
 ]
@@ -312,7 +327,7 @@ A .key[Ctrl] rotation locks to 15 degree increments.
 # Selection 
 
 .pull-left[
-To select an object, still using the Selector Tool ![Selector icon](imgs/icons/select_tool.png), you can either:
+To select an object using the Selector ![Selector icon](imgs/icons/select_tool.png) you can:
 - Click on it.
 - Drag a selection box (called a rubberband selection) completely around it and others.
 - .key[Shift] click to add/subtract from your selection.
@@ -606,7 +621,7 @@ You can select the page you wish to export from the Status Bar.
 
 ---
 # Creating a Poster
-.pl[
+.pl60[
 You now have more than enough skills to make a poster.
 
 Start by creating a Page of the size of your poster (e.g. A3, A2, etc...), or flyer (e.g., A5, A6).
@@ -619,7 +634,7 @@ You can add images to Inkscape by just dropping them onto the Canvas.
 The best method to make a good poster is to get as much feedback from others as possible.
 ]
 
-.pr[
+.pr40[
 .fit[![Poster](imgs/posters/Burren_workshop.svg)]
 
 ]
